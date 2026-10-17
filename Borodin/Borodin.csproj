@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5B19D2F9-294C-4541-BB55-3A8C10B7A6D4}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>Borodin</RootNamespace>
-    <AssemblyName>Borodin</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <BaseOutputPath>bin\</BaseOutputPath>
-    <OutputPath>bin\Debug\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath><DefineConstants>DEBUG;TRACE</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType><Optimize>true</Optimize><OutputPath>bin\Release\</OutputPath><DefineConstants>TRACE</DefineConstants>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" /><Reference Include="System.Core" /><Reference Include="System.Data" /><Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Data.Entity" /><Reference Include="System.Drawing" /><Reference Include="System.Windows.Forms" />
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="ModelEF.cs" /><Compile Include="Users.cs" /><Compile Include="Roles.cs" />
-    <Compile Include="Program.cs" /><Compile Include="Form1.cs" /><Compile Include="Form1.Designer.cs"><DependentUpon>Form1.cs</DependentUpon></Compile>
-  </ItemGroup>
-  <ItemGroup><None Include="App.config" /><None Include="packages.config" /></ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProjectGuid>{5B19D2F9-294C-4541-BB55-3A8C10B7A6D4}</ProjectGuid><OutputType>WinExe</OutputType><RootNamespace>Borodin</RootNamespace><AssemblyName>Borodin</AssemblyName><TargetFrameworkVersion>v4.8</TargetFrameworkVersion><BaseOutputPath>bin\</BaseOutputPath><OutputPath>bin\Debug\</OutputPath></PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "><OutputPath>bin\Debug\</OutputPath><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><DefineConstants>DEBUG;TRACE</DefineConstants></PropertyGroup>
+  <ItemGroup><Reference Include="System"/><Reference Include="System.Core"/><Reference Include="System.Data"/><Reference Include="System.Data.Entity"/><Reference Include="System.ComponentModel.DataAnnotations"/><Reference Include="System.Drawing"/><Reference Include="System.Windows.Forms"/><Reference Include="EntityFramework"><HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath></Reference><Reference Include="EntityFramework.SqlServer"><HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath></Reference></ItemGroup>
+  <ItemGroup><Compile Include="Program.cs"/><Compile Include="Form1.cs"/><Compile Include="ModelEF.cs"/><Compile Include="Users.cs"/><Compile Include="Roles.cs"/></ItemGroup><ItemGroup><None Include="App.config"/><None Include="packages.config"/></ItemGroup><Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
